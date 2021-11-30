@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Auktionshuset</title>
-
+    <link rel="stylesheet" href="./assets/styles.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
 </head>
@@ -13,18 +13,19 @@
     <div id="app">
         <navigations-bar></navigations-bar>
 
-        <div>
-            <h3 id="success" style="display: none;">{{message}}</h3>
-            <h1>login: not implemented</h1>
-
-            <form class="review-form" @submit.prevent="CreateAccount">
-
-                <input id="usernameInput" v-model="user.name" placeholder="Type name..."> <br> <br>
-                <br> 
-                <input id="passwordInput" v-model="user.password" placeholder="Type password...">
-      
-                <input id="createAccountButton" class="button" type="submit" value="Create user">
-            </form>
+        <div class="centerObject">
+            <div>
+                <h1>login: not implemented</h1>
+            
+                <form class="review-form" @submit.prevent="">
+            
+                    <input id="usernameInput" v-model="user.name" placeholder="Type name...">
+                    <br> <br> <br>
+                    <input id="passwordInput" v-model="user.password" placeholder="Type password...">
+            
+                    <input id="createAccountButton" class="button" type="submit" value="Log in">
+                </form>
+            </div>
         </div>
     </div>
 
