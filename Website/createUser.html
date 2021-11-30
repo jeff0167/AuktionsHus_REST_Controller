@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Auktionshuset</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <navigations-bar></navigations-bar>
+
+        <div>
+            <h3 id="success" style="display: none;">{{message}}</h3>
+            <h1>create new user</h1>
+
+            <form class="review-form" @submit.prevent="CreateAccount">
+
+                <input id="usernameInput" v-model="user.name" placeholder="Type name..."> <br> <br>
+                <input id="emailInput" v-model="user.email" placeholder="Type email...">
+                <br> <br> <br>
+                <input id="passwordInput" v-model="user.password" placeholder="Type password...">
+                <input id="confirmpasswordInput" v-model="user.confirmPassword" placeholder="Confirm password...">
+
+                <input id="createAccountButton" class="button" type="submit" value="Create user">
+            </form>
+        </div>
+
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        <script src="./components/NavigationsBar.js"></script>
+
+        <script>
+            const mountedApp = app.mount('#app')
+        </script>
+</body>
+
+</html>
