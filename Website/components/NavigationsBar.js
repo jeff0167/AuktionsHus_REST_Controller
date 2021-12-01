@@ -3,6 +3,7 @@ app.component('navigations-bar', {
     template: 
     /*html*/
     `   <div id="navdiv">
+    <h1>{{currentUser}}</h1>
     <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
         <a class="navbar-brand" href="#" id="logoButton"><img src="Images/hus.png" alt="logo" class="rounded-circle"></a>
         <div class="navbar-nav">

@@ -3,7 +3,6 @@ app.component('create-user', {
     template: 
     /*html*/
     `<div>
-    <h3 id="success" style="display: none;">{{message}}</h3>
     <h1>create new user</h1>
 
     <form class="review-form" @submit.prevent="CreateAccount">
@@ -21,7 +20,6 @@ data() {
     return {
         user: {id: 0, name: "", password: "", email: ""},
         confirmPassword: "",
-        message: "",
     }
 },
 methods: {
@@ -55,8 +53,8 @@ methods: {
         //     } catch (ex) {
         //             alert(ex.message) 
         //         }
-        this.message = "success"
         alert("Your account was created")
+        window.location.href="./login.html";
     },
 },
 })

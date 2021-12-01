@@ -3,10 +3,18 @@ const baseUrl = "https://localhost:44348/api/User/"
 const app = Vue.createApp({
     data() {
         return {
-            currentUser: "" // logged in user or something
+             currentUser: 0 // logged in user
         }
     },
+    mounted() {
+        if(localStorage.currentUser) this.currentUser = localStorage.currentUser; // saving data to local storage, persist on refresh
+      },
+    async created() {
+        this.currentUser = localStorage.currentUser;  
+     },
     methods: {
-    
+        loginUser(id){
+            localStorage.currentUser = this.currentUser = id;
+        }
     },
 })
