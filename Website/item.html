@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Auktionshuset</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <div>
+            <navigations-bar></navigations-bar>
+        </div>
+
+        <br><br><br>
+        <div class="centerObject">
+            <single-item></single-item>
+        </div>
+
+        <img src="Images/jewel.png" style="height: 150px">
+        <table class="table table-bordered">
+            <tr>
+                <td>
+                    placement
+                </td>
+                <td>
+                    name
+                    <!-- {{user.name}} -->
+                </td>
+                <td>
+                    bid
+                </td>
+            </tr>
+        </table>
+
+        <div class="container">
+            <p>item description</p>
+            <!-- {{item.description}} -->
+        </div>
+        <form>
+            <label for="autoBidNumber">Automatisk bud</label>
+            <br>
+            <input type="number" id="autoBidNumber">
+            <input type="submit" id="autoBidButton">
+        </form>
+        <div class="container mr-auto">
+            <form>
+                <label for="manualBidInput">Manuelt bud</label>
+                <br>
+                <input type="number" id="manualBidInput">
+                <input type="submit" id="manualBidButton">
+            </form>
+        </div>
+
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        <script src="./components/NavigationsBar.js"></script>
+        <script src="./components/SingleItem.js"></script>
+
+        <script>
+            const mountedApp = app.mount('#app')
+        </script>
+</body>
+
+</html>
