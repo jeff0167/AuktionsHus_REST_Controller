@@ -1,0 +1,1 @@
+https://orange-glacier-03dcf0103.azurestaticapps.net/
