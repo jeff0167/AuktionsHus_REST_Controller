@@ -12,20 +12,9 @@
 <body>
     <div id="app">
         <navigations-bar></navigations-bar>
-
+        <br>  <br>  <br>
         <div class="centerObject">
-            <div>
-                <h1>login: not implemented</h1>
-            
-                <form class="review-form" @submit.prevent="">
-            
-                    <input id="usernameInput" v-model="user.name" placeholder="Type name...">
-                    <br> <br> <br>
-                    <input id="passwordInput" v-model="user.password" placeholder="Type password...">
-            
-                    <input id="createAccountButton" class="button" type="submit" value="Log in">
-                </form>
-            </div>
+            <login @login="loginUser"></login>
         </div>
     </div>
 
@@ -38,6 +27,7 @@
         crossorigin="anonymous"></script>
     <script src="main.js"></script>
     <script src="./components/NavigationsBar.js"></script>
+    <script src="./components/Login.js"></script>
 
     <script>
         const mountedApp = app.mount('#app')
