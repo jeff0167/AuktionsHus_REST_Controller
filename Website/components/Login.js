@@ -36,7 +36,7 @@ methods: {
                         window.location.href="./index.html";
                     }
             } catch (ex) {
-                    alert("Wrong password or username") 
+                    alert("Couldn't connect to server") 
                 }
     },
 },

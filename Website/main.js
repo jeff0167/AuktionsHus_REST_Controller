@@ -1,4 +1,4 @@
-const baseUrl = "https://localhost:44348/api/User/"
+const baseUrl = "https://auktionshusapi.azurewebsites.net/api/User/"
 
 const app = Vue.createApp({
     data() {
