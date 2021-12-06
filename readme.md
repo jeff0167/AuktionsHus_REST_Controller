@@ -1,1 +1,1 @@
-https://orange-glacier-03dcf0103.azurestaticapps.net/
+https://yellow-flower-064502803.azurestaticapps.net //Yasin version
